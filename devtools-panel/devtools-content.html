@@ -1,0 +1,94 @@
+<!-- 
+  Created by sanjay kumar on 5/12/16.
+ -->
+
+<html>
+<head>
+    <title>ChroPath</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+    <link rel="stylesheet" id="cssFile" type="text/css" href="devtoolsForDefaultTheme.css" />
+</head>
+<body>
+	<div class="header">
+		<div class="header1">
+			<select class="boxTitle">
+				<option value="selectors">Selectors</option>
+				<option value="rel XPath">Rel XPath</option>
+				<option value="abs XPath">Abs XPath</option>
+				<option value="CSS">CSS sel...</option>
+			</select>
+			<div class="selector-edit-box">
+				<!-- <img class="iframeIcon" src="if.png" title="Inside iframe. Inspect any element outside iframe to switch to top dom."> -->
+				<span class="iframeIcon" title="Inside iframe. Inspect any element outside iframe to switch to top dom.">if..</span>
+				<input type="text" class="xpath-input jsXpath" placeholder=" type XPath and press enter" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value=""/>
+			</div>
+			<a class="supportLink" target="_blank" class="bold-link" title="*If xpath not generating or any issue, 
+1. Restart Chrome. 
+2. Try other website, make sure you have opened url like http://www.google.com because it might not support on blank new tab. 
+3. Chrome extensions won't support on chrome store. 
+4. Please connect with me for any support by clicking on this icon." href="https://twitter.com/SanjayKumaarr">
+		    	<!-- <img class="supportIcon" src="support.svg"> -->
+		    	<button class="supportIcon"></button>
+		    </a>
+		    <!-- <input type="color" class="theme-color" /> --> <!-- uncomment this line for theme color feature -->
+	    </div>
+	    <div>
+	    	<button class="header-copy-btn" title="click to copy rel XPath">
+	    		<!-- <img class="copyIcon" src="copy-grey.svg"> -->
+	    	</button>
+	    	<div class="toggle-btn active" title="click to disable ChroPath">
+    			<div class="toggle-circle"></div>
+  			</div>
+		    <div class="total-count jsTotalCount hideCountMsg"></div>
+		    <a class="ratingLink" target="_blank" class="bold-link" title="Please review ChroPath and help others. Thanks." href="https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo/reviews">
+		    	<button class="ratingIcon"></button>
+		    </a>
+		    <a class="chropathDetailsPage" target="_blank" class="bold-link" title="Click to know more about ChroPath." href="https://autonomiq.io/chropath">
+				<button class="autonomiqLogo"></button>
+			</a>
+	    </div>
+	</div>
+	<!-- <div class="reviewRequest">
+		<p>Please review <a target="_blank" class="bold-link" href="https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo/reviews">ChroPath</a> with how much time you are saving now. Thank you.</p>
+		<marquee behavior="scroll" direction="left" id="newFeatureBanner"><b class="title">Update:</b> Now get the <b class="title">Relative and absolute xpath</b> both. Just switch b/n rel xpath and abs xpath.</marquee>
+	</div> -->
+	<ul class='selectorsBlock'>
+		<li class="selectorsContainer">
+			<button class="copy-btn box relCopyButton" title="click to copy relative XPath"></button>
+		    <button class="edit-btn box relEditButton" title="click to edit relative XPath"></button>
+		    <span  class="selector-type box">Rel XPath</span>
+		    <span type="text" class="box jsSelector rel" placeholder="get the relative xpath here"></span>
+		    <input class="id-xpath" type="checkbox" title="xpath with id or without id." checked>
+	    </li>
+		<li class="selectorsContainer">
+			<button class="copy-btn box absCopyButton" title="click to copy absolute XPath"></button>
+		    <button class="edit-btn box absEditButton" title="click to edit absolute XPath"></button>
+		    <span  class="selector-type box">Abs XPath</span>
+		    <span type="text" class="box jsSelector abs" placeholder="get the absolute xpath here"></span>
+	    </li> 
+	    <li class="selectorsContainer">
+			<button class="copy-btn box cssCopyButton" title="click to copy CSS selector"></button>
+		    <button class="edit-btn box cssEditButton" title="click to edit CSS selector"></button>
+		    <span  class="selector-type box" title="CSS selectors">CSS sel...</span>
+		    <span type="text" class="box jsSelector css" placeholder="get the css selector here"></span>
+	    </li>
+	    <li class="selectorsContainer">
+			<button class="copy-btn box linkTextCopyButton" title="click to copy linkText"></button>
+		    <button class="edit-btn box linkTextEditButton" title="click to edit linkText"></button>
+		    <span  class="selector-type box">LinkText</span>
+		    <span type="text" class="box jsSelector linkText" placeholder="get the linkText here"></span>
+    	</li>
+	    <li class="selectorsContainer">
+			<button class="copy-btn box partialLinkTextCopyButton" title="click to copy partialLinkText"></button>
+		    <button class="edit-btn box partialLinkTextEditButton" title="click to edit partialLinkText"></button>
+		    <span  class="selector-type box" title="partialLinkText">PLinkText</span>
+		    <span type="text" class="box jsSelector partialLinkText" placeholder="get the partialLinkText here"></span>
+    	</li>    	
+    </ul>
+	<ul id="chroPathEleContainer">
+	</ul>
+	<script src="devtools-script.js"></script>
+
+
+</body>
+</html>
